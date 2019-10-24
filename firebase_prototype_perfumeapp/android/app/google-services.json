@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "115557794949",
+    "firebase_url": "https://perfumer-31178.firebaseio.com",
+    "project_id": "perfumer-31178",
+    "storage_bucket": "perfumer-31178.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115557794949:android:c9522aa4fafa910f",
+        "android_client_info": {
+          "package_name": "com.ressanoid.perfumeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115557794949-bg187sj7gvre51f31uqd0u80qc72jtrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxqHCMIIOfSewa78kAA6qtkgIONLNrEE8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
