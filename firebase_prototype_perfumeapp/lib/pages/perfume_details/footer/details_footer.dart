@@ -1,6 +1,6 @@
 import '../../../models/perfume.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+//import 'package:meta/meta.dart';
 import './perfume_pages.dart';
 class PerfumeDetailsFooter extends StatefulWidget {
   final Perfume perfume;

@@ -1,13 +1,13 @@
 import '../../../models/perfume.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+//import 'package:meta/meta.dart';
 import './perfume_background_image.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:cached_network_image/cached_network_image.dart';
 class PerfumeDetailsHeader extends StatefulWidget {
   final Perfume perfume;
   final Object avatarTag;
 
-  PerfumeDetailsHeader(this.perfume, {@required this.avatarTag});
+  PerfumeDetailsHeader(this.perfume, {this.avatarTag});
 
   @override
   State<StatefulWidget> createState() {
@@ -42,8 +42,8 @@ class _PerfumeDetailsHeaderState extends State<PerfumeDetailsHeader> {
         
         child: GridTile(
 
-            child: CachedNetworkImage(imageUrl: widget.perfume.mainPicture,)
-            ),
+            child: Image.network(widget.perfume.mainPicture)
+              ),
           ),
       ),
       );

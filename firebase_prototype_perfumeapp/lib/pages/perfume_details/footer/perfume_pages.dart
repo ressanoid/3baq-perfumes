@@ -1,7 +1,7 @@
 import '../../../models/perfume.dart';
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+//import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:charts_flutter/flutter.dart'; as charts;
 
 
 class PerfuemGallery extends StatelessWidget {
@@ -9,25 +9,34 @@ class PerfuemGallery extends StatelessWidget {
 
   PerfuemGallery(this.perfume);
 
-  @override
+  @override 
   Widget build(BuildContext context) {
-    var pictures = <Widget>[];
+    var pictures = <Image>[];
 
       var url = perfume.image;
-      var image = new CachedNetworkImage(
+  
+      var image = new NetworkImage(url) ;
+/*
+new CachedNetworkImage(
         imageUrl: url,
         placeholder: (context, url) => new CircularProgressIndicator(),
         width: 200.0,
         height: 200.0,
       );
 
+ */
       var url2 = perfume.mainPicture;
+      var image2 = new Image.network(url2);
+
+/*
       var image2 = new CachedNetworkImage(
         imageUrl: url2,
         placeholder: (context, url) => new CircularProgressIndicator(),
         width: 200.0,
         height: 200.0,
       );
+
+*/
       pictures.add(image2);
     
     var delegate = SliverGridDelegateWithFixedCrossAxisCount(
@@ -58,13 +67,14 @@ class PerfumeDetails extends StatelessWidget {
 }
 
 class Perfumebarchart {
-  String property;
-  charts.Color color;
+String property;
+  //charts.Color color;
+  Color color;
   int count;
 
-  Perfumebarchart(this.property, Color color, this.count)
-      : this.color = charts.Color(
-            r: color.red, g: color.green, b: color.blue, a: color.alpha);
+  Perfumebarchart(this.property, Color color, this.count);
+      //: this.color = Color(
+        //    r: color.red, g: color.green, b: color.blue, a: color.alpha);
 }
 
 /*
@@ -83,7 +93,9 @@ class PerfumeOpinions extends StatelessWidget {
   PerfumeOpinions(this.perfume);
   @override
   Widget build(BuildContext context) {
-    var data = [
+
+    return Container();
+  /*  var data = [
       new Perfumebarchart("Liked", Colors.indigo, perfume.isliked.length),
       new Perfumebarchart("Main Perfume", Colors.blue, perfume.isMain.length),
       new Perfumebarchart("Owned", Colors.green, perfume.isOwned.length),
@@ -120,7 +132,10 @@ class PerfumeOpinions extends StatelessWidget {
      // domainAxis:
        //   new charts.OrdinalAxisSpec(renderSpec: new charts.NoneRenderSpec()),
     ));
+  */
   }
+
+  
 }
 
 class PerfumeComments extends StatelessWidget {
@@ -138,8 +153,17 @@ class PerfumeLongevity extends StatelessWidget {
   Perfume perfume;
 
   PerfumeLongevity(this.perfume);
+
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container();
+  }
+ 
+ 
+ /*
+   
+   Widget build(BuildContext context) {
 
 
      var data = [
@@ -183,13 +207,23 @@ class PerfumeLongevity extends StatelessWidget {
        //   new charts.OrdinalAxisSpec(renderSpec: new charts.NoneRenderSpec()),
     ));
   }
-}
+
+  */
+ }
 
 class PerfumeSillage extends StatelessWidget {
   Perfume perfume;
 
   PerfumeSillage(this.perfume);
+
   @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container();
+  }
+ 
+
+ /*
   Widget build(BuildContext context) {
     var data = [
       new Perfumebarchart("Poor", Colors.red, int.parse(perfume.sillage[1])),
@@ -230,6 +264,7 @@ class PerfumeSillage extends StatelessWidget {
        //   new charts.OrdinalAxisSpec(renderSpec: new charts.NoneRenderSpec()),
     ));
   }
+*/
 }
 
 class PerfumeWhereToBuy extends StatelessWidget {

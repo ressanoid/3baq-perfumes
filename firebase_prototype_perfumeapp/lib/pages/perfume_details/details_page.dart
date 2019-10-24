@@ -1,6 +1,6 @@
 import '../../models/perfume.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+//import 'package:meta/meta.dart';
 import './header/details_header.dart';
 import './details_body.dart';
 import './footer/perfume_pages.dart';
@@ -8,7 +8,7 @@ class PerfumeDetailsPage extends StatefulWidget {
   final Perfume perfume;
   final Object avatarTag;
 
-  PerfumeDetailsPage(this.perfume, {@required this.avatarTag});
+  PerfumeDetailsPage(this.perfume, {this.avatarTag});
   @override
   State<StatefulWidget> createState() {
     return new _PerfuemDetailsPageState();

@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:cached_network_image/cached_network_image.dart';
 
 import '../services/api.dart';
 
@@ -146,7 +146,7 @@ class _NoteListState extends State<NoteList> {
       value: selectedNotesName.contains(note[index].name),
       title: new Text(note[index].name),
       secondary: CircleAvatar(
-        backgroundImage: CachedNetworkImageProvider(note[index].image),
+        backgroundImage: NetworkImage(note[index].image),
       ),
     );
   }
@@ -172,7 +172,7 @@ class _NoteListState extends State<NoteList> {
       value: selectedNotesName.contains(note[index].name),
       title: new Text(note[index].name),
       secondary: CircleAvatar(
-        backgroundImage: CachedNetworkImageProvider(note[index].image),
+        backgroundImage: NetworkImage(note[index].image),
       ),
     );
   }

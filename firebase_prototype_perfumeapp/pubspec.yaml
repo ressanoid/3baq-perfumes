@@ -20,10 +20,10 @@ dependencies:
   flutter: 
     sdk: flutter
   cupertino_icons: ^0.1.2
-  provider: ^3.0.0+1 
+  provider: ^3.1.0+1 
   font_awesome_flutter: ^8.4.0
   cached_network_image: 
-  charts_flutter: ^0.6.0 
+  charts_flutter: ^0.8.1 
   intl: ^0.15.8
   cloud_firestore: ^0.12.9
 dev_dependencies: 
