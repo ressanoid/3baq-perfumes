@@ -1,7 +1,7 @@
 import '../../../models/perfume.dart';
 import 'package:flutter/material.dart';
 //import 'package:cached_network_image/cached_network_image.dart';
-//import 'package:charts_flutter/flutter.dart'; as charts;
+import 'package:charts_flutter/flutter.dart' as charts;
 
 
 class PerfuemGallery extends StatelessWidget {
@@ -68,13 +68,12 @@ class PerfumeDetails extends StatelessWidget {
 
 class Perfumebarchart {
 String property;
-  //charts.Color color;
-  Color color;
+  charts.Color color;
   int count;
 
-  Perfumebarchart(this.property, Color color, this.count);
-      //: this.color = Color(
-        //    r: color.red, g: color.green, b: color.blue, a: color.alpha);
+  Perfumebarchart(this.property, Color color, this.count)
+      : this.color = charts.Color(
+            r: color.red, g: color.green, b: color.blue, a: color.alpha);
 }
 
 /*
@@ -93,9 +92,7 @@ class PerfumeOpinions extends StatelessWidget {
   PerfumeOpinions(this.perfume);
   @override
   Widget build(BuildContext context) {
-
-    return Container();
-  /*  var data = [
+  var data = [
       new Perfumebarchart("Liked", Colors.indigo, perfume.isliked.length),
       new Perfumebarchart("Main Perfume", Colors.blue, perfume.isMain.length),
       new Perfumebarchart("Owned", Colors.green, perfume.isOwned.length),
@@ -132,7 +129,7 @@ class PerfumeOpinions extends StatelessWidget {
      // domainAxis:
        //   new charts.OrdinalAxisSpec(renderSpec: new charts.NoneRenderSpec()),
     ));
-  */
+
   }
 
   
@@ -155,14 +152,6 @@ class PerfumeLongevity extends StatelessWidget {
   PerfumeLongevity(this.perfume);
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container();
-  }
- 
- 
- /*
-   
    Widget build(BuildContext context) {
 
 
@@ -208,7 +197,7 @@ class PerfumeLongevity extends StatelessWidget {
     ));
   }
 
-  */
+
  }
 
 class PerfumeSillage extends StatelessWidget {
@@ -217,13 +206,6 @@ class PerfumeSillage extends StatelessWidget {
   PerfumeSillage(this.perfume);
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container();
-  }
- 
-
- /*
   Widget build(BuildContext context) {
     var data = [
       new Perfumebarchart("Poor", Colors.red, int.parse(perfume.sillage[1])),
@@ -264,7 +246,6 @@ class PerfumeSillage extends StatelessWidget {
        //   new charts.OrdinalAxisSpec(renderSpec: new charts.NoneRenderSpec()),
     ));
   }
-*/
 }
 
 class PerfumeWhereToBuy extends StatelessWidget {
