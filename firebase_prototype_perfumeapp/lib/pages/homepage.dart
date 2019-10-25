@@ -43,7 +43,7 @@ class HomeView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   AppBar(
-                    title: Text("Perfumer"),
+                    title: Text("3baq-Perfumes"),
                     centerTitle: true,
                     leading: Icon(Icons.spa),
                     actions: <Widget>[

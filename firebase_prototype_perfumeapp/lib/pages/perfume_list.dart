@@ -1,7 +1,7 @@
 import 'dart:collection';
 
 import '../services/api.dart';
-
+import 'dart:math';
 import '../models/perfume.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -65,6 +65,8 @@ class _PerfumeListState extends State<PerfumeList> {
             future: _loadPerfumes(),
             builder:
                 (BuildContext context, AsyncSnapshot<List<Perfume>> snapshot) {
+                  final mediaQuery = MediaQuery.of(context);
+                ;
               if (snapshot.hasData) {
                 if (snapshot.data != null) {
                   return GridView.builder(
@@ -73,7 +75,7 @@ class _PerfumeListState extends State<PerfumeList> {
                     itemBuilder: (ctx, index) =>
                         _buildPerfumeitem(ctx, index, snapshot.data),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
+                        crossAxisCount:  mediaQuery.size.width > 1080.0 ? 8 : 2,
                         childAspectRatio: 2 / 2.5,
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10),
@@ -110,7 +112,7 @@ class _PerfumeListState extends State<PerfumeList> {
           ),
         ),
         footer: GridTileBar(
-            backgroundColor: Colors.black54, title: Text(perfume[index].name)),
+            backgroundColor: Colors.black54, title: Center(child: Text(perfume[index].name))),
       ),
     );
   }
